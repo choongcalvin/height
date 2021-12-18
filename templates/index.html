@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project: Predict height</title>
+  <style>
+	body {
+		font-family: Verdana;
+		font-size: 12px;
+	}
+  </style> 
+</head>
+
+<body>
+	<h1>Height Prediction</h1>
+	<p>This application predicts the height of an individual based on Weight, Age, Gender and Hair Colour<p>
+
+    	<form action="/predict"method="post">
+
+	<label for="hair color">Enter the hair color:</label><br><br>
+  	<input type="number" name="hair_color" placeholder="0, 1 or 2" min="0" max="2" value="1"><br><br>
+  	<small>Format: 0=black, 1=white, 2=others </small><br><br>
+  	
+	<label for="age">Enter the age:</label><br><br>
+  	<input type="number" name="age" placeholder="years" min="1" max="100" value="30"><br><br>
+  	<small>Format: age in years </small><br><br>
+
+	<label for="weight">Enter the weight:</label><br><br>
+  	<input type="number" name="weight" placeholder="kg" min="1" max="300" value="60"><br><br>
+  	<small>Format: weight in kg </small><br><br>
+
+	<label for="gender">Enter the gender:</label><br><br>
+  	<input type="number" name="gender" placeholder="0 for female or 1 for male" min="0" max="1" value="1"><br><br>
+  	<small>Format: 0=female, 1=male </small><br><br>
+
+	<input type="submit">
+
+	</form>
+   
+	<p>{{ height_prediction }}</p>
+
+</body>
+</html>
+
+
