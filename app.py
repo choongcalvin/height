@@ -17,7 +17,6 @@ def home():
 # - Convert form data to numpy array
 # - Pass form data to model for prediction
 
-
 @app.route('/predict',methods=['POST'])
 def predict():
 
@@ -27,7 +26,6 @@ def predict():
 
 	# Format prediction text for display in "index.html"
     return render_template('index.html', height_prediction='Predicted height is {:.2f} cm'.format(prediction[0]))
-
 
 # Define the '/' root route to display the content from index.html
 @app.route('/')
